@@ -1,10 +1,9 @@
-
 version: '3.8'
 services:
   simple_frontend:
     build:
       context: ../material-applications/example-frontend/
-      dockerfile: ./Dockerfile.frontend
+      dockerfile: ../../2.3/Dockerfile.frontend
     ports:
       - "5000:5000"
     depends_on:
@@ -12,6 +11,6 @@ services:
   simple_backend:
     build:
       context: ../material-applications/example-backend/
-      dockerfile: ./Dockerfile.backend
+      dockerfile: ../../2.3/Dockerfile.backend
     ports:
       - "8080:8080"
