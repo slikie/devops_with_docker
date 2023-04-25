@@ -1,13 +1,13 @@
 version: '3.8'
 services:
   simple_frontend:
-    image: simple_backend14
+    image: simple_frontend14
     ports:
       - "5000:5000"
     depends_on:
       - simple_backend
   simple_backend:
-    image: simple_frontend14
+    image: simple_backend14
     ports:
       - "8080:8080"
     environment:
