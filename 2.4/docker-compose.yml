@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  simple_frontend:
+    build:
+      context: ../material-applications/example-frontend/
+      dockerfile: ../../2.3/Dockerfile.frontend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - simple_backend
+  simple_backend:
+    build:
+      context: ../material-applications/example-backend/
+      dockerfile: ../../2.3/Dockerfile.backend
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      - redis
+  redis:
+      image: redis:alpine
+      restart: unless-stopped
