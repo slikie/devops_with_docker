@@ -8,7 +8,7 @@ RUN go build
 
 ENV PORT=8080
 
-ENV REQUEST_ORIGIN='http://localhost'
+ENV REQUEST_ORIGIN='http://localhost:5000'
 
 CMD ["./server"]
 
