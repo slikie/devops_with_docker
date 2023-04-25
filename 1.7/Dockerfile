@@ -8,5 +8,4 @@ COPY curl_website.sh .
 
 RUN chmod  +x curl_website.sh
 
-# When running Docker run the command will be ./hello.sh
 CMD ./curl_website.sh
