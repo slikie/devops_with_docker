@@ -1,8 +1,10 @@
-FROM ubuntu:20.04
+#FROM ubuntu:20.04
 #make more sense to use `FROM node:16` but ok
+#lmao ubuntu still don't have curl?
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
-RUN sudo apt install -y nodejs
+#RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
+#RUN sudo apt install -y nodejs
+FROM node:16
 COPY . .
 RUN npm install
 RUN npm install -g serve
