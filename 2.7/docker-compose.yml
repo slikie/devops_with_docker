@@ -28,7 +28,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=L33T_D3V0PS
 #    container_name: db_redmine
-     volumes:
+    volumes:
        - database:/var/lib/postgresql/data
- volumes:
-   database:
+volumes:
+  database:
