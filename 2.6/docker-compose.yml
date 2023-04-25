@@ -11,10 +11,10 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - REDIS_HOST='redis'
-      - POSTGRES_HOST='db'
-      - POSTGRES_USER='postgres'
-      - POSTGRES_PASSWORD='L33T_D3V0PS'
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=L33T_D3V0PS
     restart: unless-stopped
     depends_on:
       - redis
@@ -26,7 +26,7 @@ services:
     image: postgres:13.2-alpine
     restart: unless-stopped
     environment:
-      - POSTGRES_PASSWORD='L33T_D3V0PS'
+      - POSTGRES_PASSWORD=L33T_D3V0PS
 #    container_name: db_redmine
 #     volumes:
 #       - database:/var/lib/postgresql/data
