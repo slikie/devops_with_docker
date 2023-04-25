@@ -29,6 +29,8 @@ services:
       - POSTGRES_PASSWORD=L33T_D3V0PS
 #    container_name: db_redmine
     volumes:
-       - database:/var/lib/postgresql/data
+      - type: bind
+        source: ./database
+        target: /var/lib/postgresql/data
 volumes:
   database:
