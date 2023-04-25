@@ -1,0 +1,13 @@
+
+{
+  "name": "spotify-record",
+  "version": "1.0.0",
+  "description": "Fetch the friend activity Spotify feed, save it to mongodb",
+  "license": "Unlicense",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongodb": "^5.3.0",
+    "node-fetch": "^2.6.1",
+    "spotify-buddylist": "^1.0.0"
+  }
+}
