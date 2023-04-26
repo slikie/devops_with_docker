@@ -1,11 +1,16 @@
-all fixed up in 2.8 when it feels right.
-No apparently reason to touch Dockerfile.frontend or Dockerfile.backend.
-Maybe deleted the old ENV line?
-But it got overwritten by docker-compose.yml environment field. Should be fine as is.
 
-It is a weird behavior about nginx proxy_pass. I've been using caddy(v2) and haven't really
-found a way to handle this field(remove the trailing path in url.)
 
-But it doesnt behave the same as `proxy_pass http://simple_backend:8080/;` and `proxy_pass http://simple_backend:8080;`
+```
 
-Need to read more about it.
+130 ubuntu@arm2:~/devops_with_docker/2.10$ docker run -it --rm --network host instrumentisto/nmap localhostStarting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 02:55 UTC
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000080s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+111/tcp open  rpcbind
+
+Nmap done: 1 IP address (1 host up) scanned in 0.14 seconds
+```
+
