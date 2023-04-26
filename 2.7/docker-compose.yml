@@ -27,7 +27,6 @@ services:
     restart: unless-stopped
     environment:
       - POSTGRES_PASSWORD=L33T_D3V0PS
-#    container_name: db_redmine
     volumes:
       - type: bind
         source: ./database
