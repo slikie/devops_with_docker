@@ -1,4 +1,13 @@
+Actually need to rebuild, and not just use environment.
 
+edited Dockerfile.frontend, and run to rebuild
+`docker build -f Dockerfile.frontend -t simple_frontend_new ../material-applications/example-frontend/`
+
+After, replace the name in docker-compose.yml.
+
+Run it, now all the buttons should work. 
+
+Run the nmap - 
 
 ```
 

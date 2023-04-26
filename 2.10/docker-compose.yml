@@ -1,13 +1,13 @@
 version: '3.8'
 services:
   simple_frontend:
-    image: simple_frontend14
+    image: simple_frontend_new
     environment:
-      - REACT_APP_BACKEND_URL=http://localhost/api/
+      - REACT_APP_BACKEND_URL=http://localhost/api
     depends_on:
       - simple_backend
   simple_backend:
-    image: simple_backend14
+    image: simple_backend
     environment:
       - REDIS_HOST=redis
       - POSTGRES_HOST=db
