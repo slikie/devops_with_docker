@@ -1,18 +1,15 @@
-FROM alpine:latest
+FROM docker:latest
 RUN apk add git
 
 WORKDIR /mydir
 
 
-#755 as a normal file but +x
-#COPY --chmod=755 builder.sh builder
-#it requires buildkit apparently. settle for chmod.
-COPY builder.sh builder.sh
-RUN chmod +x builder.sh
-
-
-ENTRYPOINT [ "builder.sh" ]
-
+COPY builder.sh /mydir/builder
+RUN chmod +x builder
 
 #CMD ["/bin/sh"]
+
+ENTRYPOINT ["/bin/sh", "./builder"]
+
+
 

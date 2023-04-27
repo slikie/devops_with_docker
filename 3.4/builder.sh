@@ -15,5 +15,6 @@ cd $(echo $GITHUB_REPO | cut -d'/' -f2)
 docker build -t $DOCKERHUB_REPO .
 
 docker login
+docker login --username $DOCKER_USER --password $DOCKER_PWD
 
 docker push $DOCKERHUB_REPO
