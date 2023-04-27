@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+
+  express-app:
+    image: rility/devops-docker-3.1-express-app:latest
+    container_name: express-app
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - "3000:3000"
+    restart: always
+
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      -  WATCHTOWER_POLL_INTERVAL=60 # Poll every 60 seconds
+      -  WATCHTOWER_LABEL_ENABLE=true # only update when picked
+      # so it would only monitor/update builds with lable of this
+#          labels:
+#      - "com.centurylinklabs.watchtower.enable=false"
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower

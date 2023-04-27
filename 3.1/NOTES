@@ -1,0 +1,15 @@
+new repo, copy express-app. fill the link, send invite as collaberators.
+
+fill in the action secrets
+
+
+make .github/workflows/release-docker-when-pushed.yaml
+
+set up multi-arch builds...
+
+set up watchtower properly.. 
+- not a huge fan of watchtower.. 
+
+set it up to only enable with labelled files
+
+write a docker-compose.yml for it
