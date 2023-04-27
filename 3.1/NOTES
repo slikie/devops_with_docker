@@ -1,3 +1,9 @@
+DOCKER HUB - https://hub.docker.com/r/rility/devops-docker-3.1-express-app
+DOCKER HUB NAME - rility/devops-docker-3.1-express-app:latest
+GITHUB REPO - https://github.com/slikie/express-app (private, add collab to `Jakousa` and `mluukkai` according to intro)
+
+---
+
 new repo, copy express-app. fill the link, send invite as collaberators.
 
 fill in the action secrets
@@ -13,3 +19,26 @@ set up watchtower properly..
 set it up to only enable with labelled files
 
 write a docker-compose.yml for it
+
+test it right.
+
+code change, push code, observe action - `gh run view`
+
+- observed on watchtower log
+
+```
+
+watchtower     | time="2023-04-27T08:28:09Z" level=info msg="Session done" Failed=0 Scanned=1 Updated=0 notify=no
+watchtower     | time="2023-04-27T08:29:11Z" level=info msg="Found new rility/devops-docker-3.1-express-app:latest image (1b9350a54f3b)"
+watchtower     | time="2023-04-27T08:29:11Z" level=info msg="Stopping /express-app (b0c5e516198c) with SIGTERM"
+express-app exited with code 137
+watchtower     | time="2023-04-27T08:29:21Z" level=info msg="Creating /express-app"
+watchtower     | time="2023-04-27T08:29:22Z" level=info msg="Session done" Failed=0 Scanned=1 Updated=1 notify=no
+express-app    | Server running on port 8080
+
+
+```
+
+- curl, observed code change.
+
+
