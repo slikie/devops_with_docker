@@ -1,0 +1,11 @@
+
+FROM golang:1.16-alpine as build-stage
+WORKDIR /app
+COPY . .
+#this edit is so very important
+RUN  CGO_ENABLED=0 go build
+
+FROM scratch
+WORKDIR /app
+COPY --from=build-stage /app/server /app/
+ENTRYPOINT ["/app/server"]
