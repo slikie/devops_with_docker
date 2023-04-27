@@ -1,0 +1,4 @@
+>  docker image ls | grep express_app
+express_app_new                                    latest                    79556ea9a87b   22 seconds ago      118MB
+express_app_orig                                   latest                    954194bf0565   10 minutes ago      862MB
+
