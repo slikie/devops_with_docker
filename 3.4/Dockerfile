@@ -11,7 +11,7 @@ COPY builder.sh builder.sh
 RUN chmod +x builder.sh
 
 
-ENTRYPOINT [ "/mydir/builder.sh" ]
+ENTRYPOINT [ "builder.sh" ]
 
 
 #CMD ["/bin/sh"]
