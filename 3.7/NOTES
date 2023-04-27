@@ -1,0 +1,6 @@
+
+AFTER SWITCHING TO ALPINE..
+
+ubuntu@arm2:~/devops_with_docker/3.7$ docker image ls | grep end
+simple_frontend                                    latest                    a7f48f3e5386   32 seconds ago   467MB
+simple_backend                                     latest                    6d03e3c0c2fb   2 minutes ago    440MB
